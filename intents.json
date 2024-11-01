@@ -1,0 +1,149 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": ["hola", "Qué tal", "Hey", "Buen día", "Buena tarde", "buenas tardes", "buenas noches"],
+      "responses": ["¡Hola! ¿Cómo puedo ayudarte?", "Hola, ¿en qué te puedo apoyar?", "¡Hola! ¿Qué puedo hacer por ti?"]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Adios","Adiós!", "¡Nos vemos!", "Bye", "Cuídate", "cuidate"],
+      "responses": ["¡Adiós! Que tengas un buen día", "Nos vemos pronto, ¡cuídate!", "Bye!"]
+    },
+    {
+      "tag": "inteligencia",
+      "patterns": ["inteligencia", "inteligencia empresarial"],
+      "responses": ["La inteligencia empresarial se refiere a la recopilación, transformación, análisis de datos con el fin de convertirla en valor para la organización; así mismo, estas brindarán información que sustentará la toma de decisiones y la línea de acción a ejecutar."]
+    },
+    {
+      "tag": "bi",
+      "patterns": ["BI","Qué es BI?","Business", "Business Intelligence", "Inteligencia de negocio", "Herramienta BI"],
+      "responses": ["Una herramienta de BI es un tipo de software de aplicación diseñado para recuperar, analizar, transformar y generar informes de datos para inteligencia empresarial. Las aplicaciones generalmente leen datos que han sido previamente almacenados en DATIO"]
+    },
+    {
+      "tag": "herramientas bi",
+      "patterns": ["cuales herramientas BI hay disponibles", "Business Intelligence disponibles", "Inteligencia de negocios existentes para usar ?", "herramientas disponibles en datio"],
+      "responses": ["Existen dos herramientas BI que pueden usarse en México : Microstrategy y DOMO"]
+    },
+    {
+      "tag" : "microstrategy",
+      "patterns": ["¿Qué es Microstrategy?","microestrategy", "micro"],
+      "responses": ["Microstrategy es una plataforma de Business Intelligence que permite a la organización analizar datos para tomar decisiones informadas."]
+    },
+    {
+      "tag": "características microstrategy",
+      "patterns": ["características principales de microstrategy", "características micro", "caracteristicas micro", "detalles microstrategy"],
+      "responses": ["Algunas características clave de Microstrategy incluyen la capacidad de generar dashboards interactivos, análisis ad hoc y la integración con múltiples que sean disponibilizados en alguna persistencia de datos https://drive.google.com/file/d/1jnkKgW0iixP8P5i40bsr54Um1O7xl9cH/view?usp=drive_link"]
+    },
+    {
+      "tag": "postgresql",
+      "patterns": ["postgresql", "postgre", "postgres", "qué es postgresql?"],
+      "responses": ["PostgreSQL es un Sistema de gestión de bases de datos relacionales (RDBMS) utilizado en Datio para la preparación de datos previo a su explotación. Ofrece las siguientes características:\nConsultas complejas\nRelaciones entre tablas\nCreación de índices"]
+    },
+    {
+      "tag": "postgresql recomendación",
+      "patterns": ["cuando se recomienda el usa de postgresql?", "recomendaciones potgres", "cuando usar postgres?","usuarios con mayor experiencia"],
+      "responses": ["Se recomienda el uso de PostgreSQL para usuarios que cuenten con una mayor experiencia en construcción de objetos (tablas, índices) en Bases de Datos Relacionales. Y cuando se requiera desplegar un modelo analítico (modelo tipo estrella o copo de nieve)"]
+    },
+    {
+      "tag": "crossdata",
+      "patterns": ["Crossdata", "XD", "Qué es crossdata?", "cross"],
+      "responses": ["Crossdata es una herramienta que permite el acceso a los datos almacenados de forma centralizada, independientemente de la persistencia en uso, (Relacional, distribuido, No-SQL…)."]
+    },
+    {
+      "tag": "crossdata recomendación",
+      "patterns": ["Cuando se recomienda usar crossdata?", "recomendaciones XD", "recomendaciones crossdata", "cuando usar cross?", "usuarios con menor experiencia"],
+      "responses" : ["Crossdata se recomienda como primera opción a utilizar para usuarios que no tengan experiencia trabajando en construcción de objetos (tablas, índices,) en Bases de Datos Relacionales ni modelos tipo estrella o copo de nieve."]
+    },
+    {
+      "tag": "persistencias",
+      "patterns": ["¿Qué persistencias puedo usar con Microstrategy?", "persistencias", "persistencias micro", "zonas de almacenamiento"],
+      "responses": ["En microstrategy se puede usar tanto Crossdata como PostgreSQL como peristencia. Sin embargo, se debe revisar cada caso en particular para determinar cuál es más conveniente."]
+    },
+    {
+      "tag": "licencias",
+      "patterns": ["licencia micro","como tramitar licencias?", "licencias de microstrategy?", "como solicitar licencias en microstrategy"],
+      "responses": ["Pasos para solicitar licencias en Microstrategy \n 1) Llenar el formulario correspondiente a la petición mediante el siguiente link \n 2) Enviar al buzón de IBU (opi.infraestructura.mx@bbva.com) una copia de las respuestas enviadas al formulario. De manera simultánea solicitar al BI Owner del proyecto al cual desea conectarse que levante la solicitud de alta por medio de GIAM (para acceder es necesario contar con la configuración Proxy) \n 3) El equipo IBU aprueba el Alta en GIAM y el BI Owner recibe vía correo electrónico la aprobación.\n 4) BI Owner notificará al usuario que su acceso está listo. El acceso del usuario se verá reflejado al día siguiente por tema de sincronización.\n 5) Usuario realiza las pruebas correspondientes al acceso, generación, guardado, etc.."]
+    },
+    {
+      "tag": "precio",
+      "patterns": ["costos de licencias", "precio de licencia", "costo que tiene la licencia de microstrategy"],
+      "responses": ["Para conocer el costo de la licencia de Microstraategy es necesario contactar al equipo de IBU (opi.infraestructura.mx@bbva.com) quien gestiona las licencias de BBVA México"]
+    },
+    {
+      "tag": "tipos de cubos",
+      "patterns": ["cuales son los cubos que hay?","tipos de cubo", "cuantos cubos hay?"],
+      "responses": ["Existen dos tipos de cubos en Microstrategy :  Cubo en vivo y Cubo en memoria"]
+    },
+    {
+      "tag": "cubo memoria",
+      "patterns": ["cubo en memoria", "conexión de cubo en memoria"],
+      "responses": ["En los cubos en memoria, todos los datos se transfieren al Intelligence Server para completar un conjunto de datos en la memoria. La cantidad de datos que puede haber en el conjunto de datos está limitada por la cantidad de memoria en Intelligence Server. Este tipo de cubo está destinado solamente para pequeños catálogos los cuales no se mantienen en constante cambio. Por ejemplo el catálogo de estados de México."]
+    },
+    {
+      "tag": "cubo en vivo",
+      "patterns": ["cubo en vivo", "cubo live", "conexión de cubo en vivo"],
+      "responses": ["Los cubos de conexión en vivo permiten que los conjuntos de datos consulten datos en vivo desde la fuente. Los cubos de conexión en vivo permiten el acceso a la cantidad total y a los detalles de los datos y la fuente, en lugar de solo datos agregados o filtrados."]
+    },
+    {
+      "tag": "dossier",
+      "patterns": ["dosier","Dossier", "¿Qué es un dossier?"],
+      "responses": ["El Dossier es la herramienta de MicroStrategy para el descubrimiento de datos en el que puede crear un libro analítico. Este se puede organizar en capítulos que contentengan páginas individuales fáciles de navegar. Para proporcionar una experiencia analítica guiada a los usuarios finales, los dossiers incluyen una tabla de contenido que le ayuda a organizar capítulos y páginas de forma lógica."]
+    },
+    {
+      "tag": "Quicksight",
+      "patterns": ["Quicksight", "quick", "quicksigth", "quicksigh"],
+      "responses": [ "QuickSight se encuentra en revisión y se prevee se encuentre disponible más adelante en ADA"]
+    },
+    {
+      "tag" : "ADA",
+      "patterns": ["ADA", "ADA Microstrategy", "ada micro"],
+      "responses" : ["MicroStrategy se encontrará disponible en ADA, estará teniendo como insumos a Glue Catalog y Aurora (PostgreSQL)"]
+    },
+    {
+      "tag": "descargas",
+      "patterns": ["descarga sandbox tokenizado","descargas sandboxes justificado","descarga de archivos ficheros sandbox tokenizado y justificado"],
+      "responses": ["Descarga de archivos en sandboxes tokenizados y justificados: \n Descargas de ficheros con peso de hasta 20 MB: Descarga democrática y de autoservicio, no será necesario pasar por el circuito de autorización del Sandbox Owner. \n- Descargas de ficheros con peso mayor de 20 Mb: la descarga debe pasar por el mismo circuito de autorización del Sandbox Owner del OnPremise."]
+    },
+    {
+      "tag": "descarga restringidos",
+      "patterns": ["descarga de archivo fichero sandbox restringido", "descargas de sandboxes resntringidos", "descarga restringidos"],
+      "responses": ["Descargas de archivos en sandboxes restringidos: \n Descargas de ficheros con peso de hasta 20 Mb: la descarga debe pasar por el mismo circuito de autorización del Sandbox Owner del OnPremise.<br>\n- Descargas de ficheros con peso mayor de 20 Mb: la descarga de estos ficheros estará bloqueada."]
+    },
+    {
+      "tag": "objetos sandbox tokenizado",
+      "patterns": ["información o rutas que se visualizan en sandbox tokenizado", "tablas que se ven en sandbox tokenizado", "objetos que ve un sandbox tokenizado"],
+      "responses": ["En un sandbox tokenizado se tiene acceso a objetos de nivel L1 y L1T"]
+    },
+    {
+      "tag": "objetos sandbox justificado",
+      "patterns": ["información o rutas que se visualizan en sandbox justificado", "tablas que se ven en sandbox justificado", "objetos que ve un sandbox justificado"],
+      "responses": ["En un sandbox justificado se tiene acceso a objetos de nivel L1 y L2"]
+    },
+    {
+      "tag": "objetos sandbox restringido",
+      "patterns": ["información o rutas que se visualizan en sandbox restringido", "tablas que se ven en sandbox restringido", "objetos que ve un sandbox restringido"],
+      "responses": ["En un sandbox restringido se tiene acceso a objetos de nivel L1, L2, L3"]
+    },
+    {
+      "tag": "engine",
+      "patterns":["engine","Qué es un engine?"],
+      "responses": ["Un Engine es un proceso con uno o más conjuntos de datos de entrada, donde se aplican varias transformaciones a los datos originales usando una determinada lógica para obtener nuevos datos."]
+    },
+    {
+      "tag": "carga",
+      "patterns": ["carga", "carga de archivos","subida de archivos", "upload","Upload Carga Subida Subir archivo file fichero sandbox área Dasha ADA"],
+      "responses": ["Carga de archivos: \n Los usuarios con permiso (Data Scientist y Data Analyst) podrán subir archivos, excepto comprimidos, a la zona Sandbox con un tamaño máximo de 2Gb por archivo (sin límite de cuántos archivos se suben, pero todos deben ser auditados). \n La subida de ficheros con capacidad superior a ese límite estará bloqueada por defecto para todos los tipos de Sandbox. \n Todos los ficheros subidos al Sandbox serán auditados. Se llevará a cabo la monitorización de los Upload por seguridad, para asegurar el buen uso de esta funcionalidad."]
+    },
+    {
+      "tag": "descarga",
+      "patterns": ["descarga archivos","límite de descarga", "límite de descarga de archivos de sandbox", "limite límite de descarga archivos de Sandbox con Dasha ADA"],
+      "responses": ["Descarga de archivos: \n El tamaño máximo de descarga es de 20 MB, y para ficheros superiores a ese peso estará bloqueada la funcionalidad de descarga. \n No se permite la descarga de archivos comprimidos.\n Se propone un TTL por defecto de 24h para efectuar la descarga, con la posibilidad de que el usuario lo modifique, seleccionando un valor entre 1 y 7 días al rellenar el formulario de descarga.\n No se permite que el usuario solicitante sea el mismo que el usuario autorizador, excepto en aquellos casos en los que solo exista un Sandbox Owner en el Sandbox.\n Todos los ficheros descargados serán auditados. Se llevará a cabo la monitorización de las descargas por seguridad, para asegurar el buen uso de esta funcionalidad."]
+    },
+    {
+      "tag": "domo",
+      "patterns": ["Cómo puedo tener acceso a una herramienta BI Microstrategy DOMO ?", "acceso DOMO", "domo"],
+      "responses": ["Para tener acceso a las herramientas BI se debe notificar al equipo BI Tools local para que se puedan habilitar."]
+    }
+  ]
+}
