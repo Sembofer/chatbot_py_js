@@ -4,7 +4,7 @@ from chatbot import get_response, predict_class
 import json
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins":"*", "methods":["GET", "POST"]}})
+CORS(app, resources={r"/api/*": {"origins":"*", "methods":["POST"]}})
 intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
 
 @app.get("/")
@@ -13,7 +13,7 @@ def index_get():
 
 
 
-@app.route("/api/predict", methods=["GET", "POST"])
+@app.route("/api/predict", methods=["POST"])
 def predict():
     text = request.get_json().get("message")
     # TODO:check if text is valid
