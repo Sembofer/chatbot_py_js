@@ -4,6 +4,7 @@ from chatbot import get_response, predict_class
 import json
 import os
 import nltk
+import time
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins":"*", "methods":["POST"]}})
@@ -29,5 +30,6 @@ def predict():
 if __name__ == "__main__":
     nltk.download('punkt_tab')
     nltk.download('wordnet')
+    sleep(200)
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
