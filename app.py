@@ -13,7 +13,7 @@ def index_get():
 
 
 
-@app.route("/predict")
+@app.route("/api/predict", methods=["GET", "POST"])
 def predict():
     text = request.get_json().get("message")
     # TODO:check if text is valid
