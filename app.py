@@ -4,7 +4,7 @@ from chatbot import get_response, predict_class
 import json
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins":"*", "methods":["GET", "POST"]}})
 intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
 
 @app.get("/")
