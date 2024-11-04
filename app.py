@@ -4,12 +4,12 @@ from chatbot import get_response, predict_class
 import json
 
 app = Flask(__name__)
-CORS(app, origins=["https://chatbot-py-js.onrender.com"])
+CORS(app)
 intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
 
-#@app.get("/")
-#def index_get():
-#    return render_template("base.html")
+@app.get("/")
+def index_get():
+    return render_template("base.html")
 
 
 
