@@ -48,7 +48,7 @@ class Chatbox {
         const API_URL = "https://chatbot-py-js.onrender.com";
 
         fetch('${API_URL}/predict', {
-            method: 'POST',
+            method: 'GET',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
             headers: {
