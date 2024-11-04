@@ -51,7 +51,7 @@ class Chatbox {
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
             headers: {
-              'Access-Control-Allow-Origin': '*'
+              'Content-Type': 'application/json'
             },
           })
           .then(r => r.json())
