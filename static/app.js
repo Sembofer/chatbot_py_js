@@ -45,9 +45,8 @@ class Chatbox {
 
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
-        const API_URL =process.env.NODE_ENV=="production" ? "https://chatbot-py-js.onrender.com" : "http://127.0.0.1:500";
 
-        fetch('${API_URL}/predict', {
+        fetch('https://chatbot-py-js.onrender.com/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
