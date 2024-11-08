@@ -54,7 +54,14 @@ class Chatbox {
               'Content-Type': 'application/json'
             },
           })
+          .then(response => {
+                if (!response.ok {
+                    throw new Error ('Error en la respuesta: ${response.status}');
+                }
+                return response.text();
+            })
           //.then(r => r.json())
+          .then(r => r.text())
           .then(r => {
             let msg2 = { name: "Sam", message: r.answer };
             this.messages.push(msg2);
