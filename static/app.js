@@ -48,8 +48,7 @@ class Chatbox {
 
         fetch('https://chatbot-py-js.onrender.com/api/predict', {
             method: 'POST',
-            //body: JSON.stringify({ message: text1 }),
-            body: message: text1,
+            body: JSON.stringify({ message: text1 }),
             mode: 'cors',
             headers: {
               'Content-Type': 'application/json'
