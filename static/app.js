@@ -55,10 +55,11 @@ class Chatbox {
             },
           })
           .then(response => {
-                if (!response.ok {
-                    throw new Error ('Error en la respuesta: ${response.status}');
-                }
-                return response.text();
+              console.log(response);
+              return response.json();
+          })
+            .then(data=> {
+                console.log(data);
             })
           //.then(r => r.json())
           .then(r => r.text())
