@@ -18,9 +18,10 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.keras')
 
 def clean_up_sentence(sentence):
-    nltk.download('punkt_tab')
-    nltk.download('wordnet')
-    #sleep(200)
+    nltk.data.path.append('./wordnet')
+    nltk.data.path.append('./punkt_tab')
+    #nltk.download('punkt_tab')
+    #nltk.download('wordnet')
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
