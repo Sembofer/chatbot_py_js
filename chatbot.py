@@ -22,6 +22,7 @@ def clean_up_sentence(sentence):
     nltk.data.path.append('./wordnet')
     nltk.data.path.append('./punkt_tab')
     nltk.data.path.append('./tokenizers')
+    nltk.data.path.append('./corpora')
     nltk.data.path.append('./')
     #nltk.download('punkt_tab')
     #nltk.download('wordnet')
