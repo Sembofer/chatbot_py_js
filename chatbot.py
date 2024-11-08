@@ -7,7 +7,8 @@ import time
 
 import nltk
 from nltk.stem import WordNetLemmatizer
-
+from nltk.corpus import wordnet
+from nltk.tokenize import word_tokenize
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
@@ -19,6 +20,7 @@ model = load_model('chatbot_model.keras')
 
 def clean_up_sentence(sentence):
     nltk.data.path.append('./wordnet')
+    nltk.data.path.append('./punkt_tab')
     nltk.data.path.append('./punkt_tab')
     #nltk.download('punkt_tab')
     #nltk.download('wordnet')
