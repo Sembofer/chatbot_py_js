@@ -54,7 +54,6 @@ class Chatbox {
               'Content-Type': 'application/json'
             },
           })
-          .then(data => console.log(data))
           .then(r => r.json())
           .then(r => {
             let msg2 = { name: "Sam", message: r.answer };
@@ -62,7 +61,7 @@ class Chatbox {
             this.updateChatText(chatbox)
             textField.value = ''
 
-        }).catch((error=> console.error("Error al obtener el json", error)) => {
+        }).catch((error) => {
             console.error('Error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
