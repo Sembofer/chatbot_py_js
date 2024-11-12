@@ -10,6 +10,9 @@ app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins":"*", "methods":["POST"]}})
 intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
 
+@app.get("/")
+def index_get():
+    return render_template("base.html")
 
 @app.route("/api/predict", methods=["POST"])
 def predict():
