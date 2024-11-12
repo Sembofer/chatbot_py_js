@@ -52,6 +52,7 @@ def predict_class(sentence):
     return return_list
 
 def get_response(intents_list, intents_json):
+    intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
