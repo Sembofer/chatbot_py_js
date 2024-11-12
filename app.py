@@ -21,7 +21,7 @@ def predict():
     ints = predict_class(text)
     response = get_response(ints, intents)
     message = {"answer":response}
-    return jsonify(message)
+    return message
 
 
 
