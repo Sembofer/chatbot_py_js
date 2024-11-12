@@ -40,6 +40,11 @@ def bag_of_words(sentence):
     return np.array(bag)
 
 def predict_class(sentence):
+    lemmatizer = WordNetLemmatizer()
+    intents = json.loads(open('intents.json', 'r', encoding='utf-8').read())
+    words = pickle.load(open('words.pkl', 'rb'))
+    classes = pickle.load(open('classes.pkl', 'rb'))
+    model = load_model('chatbot_model.keras')
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
     ERROR_THRESHOLD = 0.25
